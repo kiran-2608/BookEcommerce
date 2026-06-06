@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f5f7fb;
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ALL TEXT */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+div {
+  color: #222;
+}
+
+/* LINKS */
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+/* NAVBAR LINKS */
+nav a {
+  color: white;
+  font-weight: 500;
+}
+
+/* INPUTS */
+input,
+select,
+button,
+textarea {
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* PLACEHOLDER */
+input::placeholder {
+  color: #666;
+}
+button {
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+/* ===== STEP ANIMATION ===== */
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.step-active {
+  animation: pop 0.3s ease-in-out;
+}
+
+/* ===== SECTION ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-animate {
+  animation: fadeUp 0.4s ease-in-out;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .checkout-container {
+    flex-direction: column !important;
+  }
+
+  .summary-box {
+    position: static !important;
+  }
+}
